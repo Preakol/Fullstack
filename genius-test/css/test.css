@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.item {
+  flex-basis: 100px;
+  height: 100px;
+  background-color: peachpuff;
+  padding: 10px;
+  border: 6px solid lime;
+  margin: 10px;
+}
