@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Сучасна пекарня</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
@@ -140,6 +140,12 @@
             <ul class="formats-list">
               <li class="formats-item">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./images/walrus-format.jpg"
+                    alt="Walrus format"
+                  />
+                  <div class="format-rectangle"></div>
                   <h3 class="format-title" lang="en">Walrus</h3>
                   <div class="format-text">
                     <p>Площа: до 120 м2</p>
@@ -154,6 +160,12 @@
               </li>
               <li class="formats-item">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./images/horseshoe-format.jpg"
+                    alt="Walrus format"
+                  />
+                  <div class="format-rectangle"></div>
                   <h3 class="format-title" lang="en">Horseshoe</h3>
                   <div class="format-text">
                     <p>Площа: до 25 м2</p>
@@ -165,6 +177,12 @@
               </li>
               <li class="formats-item">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./images/handlebar-format.jpg"
+                    alt="Walrus format"
+                  />
+                  <div class="format-rectangle"></div>
                   <h3 class="format-title" lang="en">Handlebar</h3>
                   <div class="format-text">
                     <p>Площа: до 15 м2</p>
@@ -202,6 +220,7 @@
                     type="text"
                     name="user-name"
                     placeholder="Ім’я"
+                    required
                   />
                 </div>
 
@@ -215,6 +234,7 @@
                     type="tel"
                     name="user-tel"
                     placeholder="Телефон"
+                    required
                   />
                 </div>
 
@@ -228,6 +248,7 @@
                     type="email"
                     name="user-email"
                     placeholder="Електронна пошта"
+                    required
                   />
                 </div>
 
@@ -318,7 +339,7 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop">
+    <div class="backdrop is-hidden">
       <div class="modal">
         <button class="modal-btn-close" type="button">Close</button>
         <h2>Замовити дзвінок</h2>
