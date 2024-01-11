@@ -8,71 +8,174 @@
   background-position: center;
   background-size: cover;
   padding: 32px 0;
-}
-
-.footer::before,
-.footer::after {
-  position: absolute;
-  bottom: 0;
-  background-repeat: no-repeat;
-  content: '';
-}
-
-.footer::before {
-  width: 180px;
-  height: 120px;
-  left: 0;
-  background-image: url('../images/decor-bread-small.png');
-}
-
-.footer::after {
-  width: 380px;
-  height: 185px;
-  right: 0;
-  background-image: url('../images/decor-bread-large.png');
-}
-
-.footer-container {
-  display: flex;
-  gap: 20px;
-}
-
-.footer-nav,
-.footer-address {
-  display: flex;
-  flex-basis: 50%;
-  gap: 20px;
-}
-
-.footer-logo,
-.footer-menu,
-.address-list,
-.address-info {
-  flex-basis: 50%;
-}
-
-.address-link {
-  color: var(--color--primary-light);
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 300;
-  transition: color 0.3s;
-}
-
-.address-link:hover {
-  color: var(--color--brand-normal);
-}
-
-.address-icon {
-  fill: var(--color--primary-light);
-  transition: fill 0.3s;
-}
-
-.address-icon:hover {
-  fill: var(--color--brand-normal);
-}
-
-.address-copyright {
   font-size: 14px;
-  color: #a18268;
+
+  @media screen and (min-width: $bp-desktop) {
+    font-size: 16px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    bottom: 0;
+    background-repeat: no-repeat;
+    content: '';
+  }
+
+  &::before {
+    width: 85px;
+    height: 205px;
+    top: 0;
+    left: 0;
+    background-image: url('../images/decor-bread-small_mobile.png');
+
+    @media screen and (min-width: $bp-desktop) {
+      width: 180px;
+      height: 120px;
+      top: auto;
+      left: 0;
+      background-image: url('../images/decor-bread-small.png');
+    }
+  }
+
+  &::after {
+    width: 100px;
+    height: 90px;
+    right: 0;
+    background-image: url('../images/decor-bread-large_mobile.png');
+
+    @media screen and (min-width: $bp-desktop) {
+      width: 380px;
+      height: 185px;
+      right: 0;
+      background-image: url('../images/decor-bread-large.png');
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    // gap: 18px;
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+
+  &__nav,
+  &__address {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+      flex-basis: 50%;
+      text-align: left;
+      gap: 20px;
+    }
+  }
+
+  &__logo,
+  &__menu {
+    flex-basis: 50%;
+    // margin-bottom: 18px;
+  }
+
+  &__logo {
+    margin-bottom: 32px;
+  }
+
+  &__menu,
+  &__address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    @media screen and (min-width: $bp-desktop) {
+      gap: 16px;
+    }
+  }
+
+  &__address-contacts {
+    // align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 18px;
+
+    @media screen and (min-width: $bp-desktop) {
+      margin-top: 0;
+    }
+  }
+
+
+  &__address-info {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @media screen and (min-width: $bp-desktop) {
+      margin-top: 0;
+      gap: 16px;
+    }
+  }
+
+  &__address-list,
+  &__address-info {
+    flex-basis: 50%;
+  }
+
+
+
+  &__address-link {
+    color: var(--color--primary-light);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    transition: color 0.3s;
+
+    @media screen and (min-width: $bp-desktop) {
+      font-size: 16px;
+    }
+  }
+
+  &__address-link:hover {
+    color: var(--color--brand-normal);
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: center;
+    height: 32px;
+    gap: 22px;
+
+    @media screen and (min-width: $bp-desktop) {
+      justify-content: start;
+    }
+  }
+
+  &__address-icon {
+    fill: var(--color--primary-light);
+    transition: fill 0.3s;
+  }
+
+  &__address-icon:hover {
+    fill: var(--color--brand-normal);
+  }
+
+  // &__confident {
+  //   margin-top: 16px;
+  // }
+
+  &__address-copyright {
+    font-size: 12px;
+    color: #a18268;
+
+    @media screen and (min-width: $bp-desktop) {
+      font-size: 14px;
+    }
+  }
 }

@@ -10,6 +10,6 @@
 }
 
 .button:hover {
-  background-color: transparent;
+  background-color: var(--color--primary-light);
   color: var(--color--brand-dark);
 }
